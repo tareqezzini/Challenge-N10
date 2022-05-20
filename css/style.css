@@ -1,0 +1,470 @@
+/*
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+--------------------- Fylo landing page with -------------------------
+---------------------   two column layout    -------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+*/
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:ital,wght@0,400;1,700&display=swap');
+
+
+
+
+/* - Very Dark Blue: hsl(243, 87%, 12%)
+- Desaturated Blue: hsl(238, 22%, 44%)
+
+### Accent
+
+- Bright Blue: hsl(224, 93%, 58%)
+- Moderate Cyan: hsl(170, 45%, 43%)
+
+### Neutral
+
+- Light Grayish Blue: hsl(240, 75%, 98%)
+- Light Gray: hsl(0, 0%, 75%) */
+/* Colors */
+:root
+{
+    --Desaturated-Blue: hsl(238, 22%, 44%);
+    --Dark-Blue:hsl(243, 87%, 12%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+}
+
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+a{text-decoration: none;}
+ul
+{
+    list-style: none;
+}
+body
+{
+    /* font-family: 'Raleway', sans-serif; */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}
+.container
+{
+    padding: 0 5rem;
+}
+
+.logo img
+{
+    max-width: 100%;
+}
+.lading .heading
+{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lading .heading .nav
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.lading .heading .nav li
+{
+    margin-right: 2rem;
+}
+.lading .heading .nav li a
+{
+    font-family: 'Raleway';
+    color: var(--Desaturated-Blue);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.lading .ladding-sec
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.lading .ladding-sec .info-text
+{
+    max-width: 40%;
+}
+.lading .ladding-sec .info-text h1
+{
+    color: var(--Dark-Blue);
+    font-family: 'Raleway';
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 1.5;
+
+}
+.lading .ladding-sec .info-text p
+{
+    margin: 1rem 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var( --Dark-Blue);
+}
+.lading .ladding-sec .info-text input:first-child
+{
+    border: 2px solid var(--Desaturated-Blue);
+    padding: 12px 15px;
+    width: 300px;
+}
+.lading .ladding-sec .info-text input::placeholder
+{
+    font-size: 15px;
+    color: var(--Light-Gray);
+    font-family: inherit;
+}
+.lading .ladding-sec .info-text input:last-child
+{
+    border: 2px solid var(--Bright-Blue);
+    border-radius: 4px;
+    color: white;
+    background-color: var(--Bright-Blue);
+    padding: 12px 50px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Raleway';
+}
+.lading .ladding-sec .image
+{
+    width: 40%;
+}
+.lading .ladding-sec .image img
+{
+    width: 100%;
+}
+/* ---------------------------------------- testimonial-------------------------------- */
+
+.testimonial
+{
+    position: relative;
+    margin-top: 200px;
+    background-color: var(--Light-Grayish-Blue);
+}
+.testimonial::before
+{
+    content: '';
+    position: absolute;
+    background-image: url(../images/bg-curve-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -75px;
+     width: 100%;
+    height: 100px;
+    z-index: -1;
+}    
+.testimonial .testimo
+{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial .testimo .info
+{
+    max-width: 40%;
+}
+.testimonial .testimo .illustration
+{
+    max-width: 35%;
+}
+.testimonial .testimo .illustration img
+{
+    max-width: 100%;
+}
+.testimonial .testimo h2
+{
+    font-size: 2.5rem;
+    font-family: 'Raleway';
+    font-weight: 700;
+    color: var(--Dark-Blue);
+    margin-bottom: 1rem;
+}
+.testimonial .testimo .info p
+{
+    font-size: 16px;
+    margin: 1rem 0;
+    color: var(--Desaturated-Blue);
+}
+.testimonial .testimo a
+{
+    font-size: 18px;
+    color: var(--Moderate-Cyan);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--Moderate-Cyan);
+    width: fit-content;
+    padding-bottom: 6px;
+}
+.testimonial .testimo a img
+{
+    margin-left: 10px;
+}
+.testimonial .testimo .card
+{
+    margin-top: 1rem;
+    max-width: 350px;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.testimo .card .avater
+{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.testimo .card .avater img
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.testimo .card .avater h3
+{
+    font-size: 14px;
+    font-family: 'sans-serif';
+    letter-spacing: 1px;
+}
+.testimo .card .avater span
+{
+    display: block;
+    font-size: 12px;
+    color: var(--Light-Gray);
+}
+
+/*-------------------------- Inscription ---------------------------------*/
+.iscription
+{
+    padding: 4rem 0;
+    background-color: var(--Desaturated-Blue);
+}
+.iscription .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.iscription .text 
+{
+    max-width: 500px;
+}
+.iscription .text h2
+{
+    color: white;
+    margin-bottom: 1rem;
+    font-size: 35px;
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+.iscription .text p
+{
+    color: white;
+    opacity: .9;
+    font-family: 'Raleway';
+    font-size: 14px;
+    line-height: 1.5;
+}
+.iscription form
+{
+    display: flex;
+    flex-direction: column;
+}
+.iscription form input:first-child
+{
+    width: 400px;
+    padding: 13px;
+    border: none;
+    margin-bottom: 14px;
+    border-radius: 2px;
+}
+.iscription form input::placeholder
+{
+    color: var(--Desaturated-Blue);
+    font-size: 14px;
+}
+.iscription form input:last-child
+{
+    width: fit-content;
+    color: white;
+    background-color:var(--Bright-Blue);
+    border: none;
+    padding: 12px 20px;
+    font-size: 14px;
+}
+/*-------------------------- Inscription ---------------------------------*/
+footer
+{
+    background-color: var(--Dark-Blue);
+    padding: 85px 0;
+}
+footer .footer
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+footer .address li ,
+footer li a
+{
+    display: block;
+    margin-bottom: 14px;
+    font-size: 18px;
+    color: var(--Light-Gray);
+
+}
+footer .address li img
+{
+    margin-right: 10px;
+    
+}
+footer .social li
+{
+    display: inline-block;
+    margin-right: 10px;
+}
+footer .social li i
+{
+   color: white;
+   border: 1px solid var(--Desaturated-Blue);
+   border-radius: 50%;
+   font-size: 20px;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition: .3s;
+}
+footer .social li i:hover
+{
+    color: var(--Bright-Blue);
+}
+@media (max-width:1200px) 
+{
+    .container{
+        padding: 0 40px ;
+    }
+    /*---------------------------logo--------------------------*/
+    .logo
+    {
+        max-width: 22%;
+    }
+    /*---------------------- ladding pages ---------------------*/
+    .lading .ladding-sec
+    {
+        flex-direction: column-reverse;
+    }
+    .lading .ladding-sec .image, .lading  .ladding-sec .info-text
+    {
+        max-width: 100%;
+    }
+    .lading .ladding-sec .info-text h1 ,
+    .lading .ladding-sec .info-text p,
+    .testimonial .testimo .info p 
+    {
+        text-align: center;    
+    }
+    .lading .ladding-sec .info-text h1{font-size: 25px;}
+    .lading .ladding-sec .info-text input,
+    .lading .ladding-sec .info-text input:last-child
+    {
+        
+        display: block;
+        width: 300px;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*----------------------testimonails---------------------*/
+    .testimonial::before
+    {
+        background-image: url(../images/bg-curve-mobile.svg);
+        background-size: contain;
+        top: -60px;
+    }
+    .testimonial .testimo
+    {
+        flex-direction: column-reverse;
+    }
+    .testimonial .testimo .illustration , 
+    .testimonial .testimo .info
+    {
+        max-width: 100%;
+    }
+    .testimonial .testimo h2
+    {
+        text-align: center;
+        font-size: 23px;
+        margin-top: 4rem;
+    }
+    .testimonial .testimo a
+    {
+        margin: auto;
+    }
+    .testimonial .testimo .card 
+    {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4rem;
+    }
+    /*----------------------inscription---------------------*/
+    .iscription .container
+    {
+        flex-direction: column;
+    }
+    .iscription .text 
+    {
+        max-width: fit-content;
+    }
+    .iscription .text h2
+    {
+        font-size: 30px;
+        text-align: center;
+    }
+    .iscription .text p
+    {
+        font-size: 16px;
+        line-height: 1.6;
+        text-align: center;
+        margin-bottom: 
+        25px;
+    }
+    .iscription input{
+        max-width: 300px;
+    }
+    /*----------------------Footer---------------------*/
+    footer
+    {
+        padding: 40px 0;
+    }
+    footer .footer
+    {
+        flex-direction: column;
+    }
+    footer .footer ul
+    {
+        margin-bottom: 20px;
+    }
+    footer .social
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
